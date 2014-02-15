@@ -1,7 +1,7 @@
 // Package thread implements simple routines for forcing tasks to be executed
 // on certain threads. Especially useful for code that must be called from the
 // main thread.
-package gome
+package thread
 
 import (
     "runtime"
