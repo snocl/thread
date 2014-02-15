@@ -15,7 +15,7 @@ type Thread struct {
 
 // NewThread creates a new Thread. The thread will not handles calls to Do
 // until Run has been called.
-func NewThread() *Thread {
+func New() *Thread {
     return &Thread{
         make(chan func()),
         make(chan struct{}),

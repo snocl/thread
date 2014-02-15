@@ -12,7 +12,7 @@ The following example ensures that `foo` and `bar` are both called from the
 same thread.
 
 ```go
-t := thread.NewThread()
+t := thread.New()
 go t.Run()
 t.Do(foo)
 t.Do(bar)
@@ -22,7 +22,7 @@ By calling `Run` directly from the main thread, all tasks get executed on this
 thread.
 
 ```go
-t := thread.NewThread()
+t := thread.New()
 go func() {
   t.Do(foo)
   t.Do(bar)
