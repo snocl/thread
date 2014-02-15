@@ -2,11 +2,12 @@ thread
 ======
 
 Simple threading library for Go. `thread` allows you to ensure that certain
-functions are called from certain OS threads.
+functions are called from certain OS threads. Documentation can be found
+[here](http://godoc.org/github.com/snorredc/thread).
 
 
 Examples
-========
+--------
 
 The following example ensures that `foo` and `bar` are both called from the
 same thread.
@@ -24,8 +25,8 @@ thread.
 ```go
 t := thread.New()
 go func() {
-  t.Do(foo)
-  t.Do(bar)
+    t.Do(foo)
+    t.Do(bar)
 }()
 t.Run()
 ```
