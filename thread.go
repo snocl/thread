@@ -37,7 +37,7 @@ func (thread *Thread) Run() {
 }
 
 // Do causes the task to be executed on the Thread and waits for the task to
-// finish. Do panics, if 
+// finish. Do panics, if the thread has been stopped with Stop.
 func (thread *Thread) Do(task func()) {
     thread.tasks <- task
     <-thread.done
